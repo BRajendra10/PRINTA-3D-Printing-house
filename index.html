@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="w-full h-[80px] fixed flex justify-between items-center px-5">
+            <div class="flex items-center gap-3 w-3/5 lg:w-1/5 h-[80px]">
+                <div
+                    class="w-[44px] h-[44px] bg-blue-500 flex justify-center items-center text-2xl text-gray-50 rounded-sm">
+                    P
+                </div>
+                <div>
+                    <span class="block text-xl font-medium text-gray-50">PRINTA</span>
+                    <span class="block text-sm font-medium text-gray-50">
+                        3D printing house
+                    </span>
+                </div>
+            </div>
+            <div class="flex justify-end items-center gap-5 w-2/5 lg:w-4/5 h-[80px]">
+                <ul class="w-[600px] hidden lg:flex justify-around gap-5 px-6 py-4 rounded-full bg-gray-950">
+                    <li class="text-sm font-semibold text-gray-50 hover:text-blue-500">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="text-sm font-semibold text-gray-50 hover:text-blue-500">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="text-sm font-semibold text-gray-50 hover:text-blue-500">
+                        <a href="#">Materials</a>
+                    </li>
+                    <li class="text-sm font-semibold text-gray-50 hover:text-blue-500">
+                        <a href="#">Resources</a>
+                    </li>
+                    <li class="text-sm font-semibold text-gray-50 hover:text-blue-500">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="text-sm font-semibold text-gray-50 hover:text-blue-500">
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+
+                <button class="text-3xl text-gray-50 lg:hidden">
+                    <i class="ri-menu-line"></i>
+                </button>
+
+                <button
+                    class="px-7 py-4 hidden lg:block text-sm cursor-pointer font-semibold text-gray-50 bg-blue-500 rounded-full hover:bg-gray-50 hover:text-gray-800">
+                    Get a Quote
+                </button>
+            </div>
+        </nav>
+
+        <div class="header-info">
+            <h1 class="text-7xl font-medium text-gray-50 mb-5">
+                Make Your 3D Dreams a Reality
+            </h1>
+            <span class="text-xl text-gray-50">Professional 3D Solutions Under One Roof</span>
+
+            <div class="flex gap-5 my-8">
+                <button
+                    class="px-7 py-4 hidden lg:block text-sm cursor-pointer font-semibold text-gray-50 bg-blue-500 rounded-full hover:bg-gray-50 hover:text-gray-800">
+                    Get a Quote
+                </button>
+
+                <button
+                    class="px-7 py-4 hidden lg:block text-sm cursor-pointer font-semibold text-gray-50 bg-gray-800 rounded-full hover:bg-gray-50 hover:text-gray-800">
+                    View materials catalog
+                </button>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
