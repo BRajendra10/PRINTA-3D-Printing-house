@@ -1,20 +1,27 @@
-header{
-    width: 100%;
-    height: 120vh;
-    background-image: url(assets/header-image.jpg);
-    background-position: center;
-    background-size: cover;
+header {
+  width: 100%;
+  height: 120vh;
+  background-image: url(assets/header-image.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-.nav-links{
-    @apply text-sm font-semibold text-gray-50 hover:text-blue-500;
+.header-info {
+  width: 550px;
+  height: fit-content;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 20%;
 }
 
-.header-info{
-    width: 550px;
-    height: fit-content;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 20%;
+header > section > div::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 5rem;
+  background: #2B7FFF;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 8px;
 }
