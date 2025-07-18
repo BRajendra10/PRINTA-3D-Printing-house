@@ -29,7 +29,20 @@ header {
 
 .section-batch{
   position: absolute;
+  top: 0%;
   left: 8.5%;
+  animation-name: slideDown;
+  animation-timeline: scroll();
+  animation-range: 0% 30%;
+}
+
+@keyframes slideDown{
+  50%{
+    top: -5%;
+  }
+  100%{
+    top: 0%;
+  }
 }
 
 @keyframes slideRight{
