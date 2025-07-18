@@ -12,12 +12,33 @@ header {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 40%;
-  left: 0;
+  left: 25%;
+  animation-name: slideRight;
+  animation-duration: 0.8s;
 }
 
-.translateX{
-  left: 22%;
-  transition-duration: 1.3s;
+.video-section{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 25%;
+  animation-name: slideRight;
+  animation-duration: 0.8s;
+  animation-timeline: scroll();
+}
+
+.section-batch{
+  position: absolute;
+  left: 8.5%;
+}
+
+@keyframes slideRight{
+  0%{
+    left: 0%;
+  }
+  100%{
+    left: 25%;
+  }
 }
 
 header > section > div::before {
@@ -29,4 +50,9 @@ header > section > div::before {
   margin-right: 8px;
   vertical-align: middle;
   border-radius: 8px;
+}
+
+.eli-height{
+  height: 5rem;
+  transition-duration: 1.3s;
 }

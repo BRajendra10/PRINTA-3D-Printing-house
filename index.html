@@ -77,22 +77,39 @@
         </div>
 
         <section class="w-[80%] h-[120px] bg-gray-800 absolute bottom-10 left-40 flex justify-around items-center gap-4 p-3" id="header-section">
-            <div>
+            <div class="header-section-eli">
                 <span class="text-xl text-gray-50">Up to 1000 parts</span>
             </div>
-            <div>
+            <div class="header-section-eli">
                 <span class="text-xl text-gray-50">30+ Materials available</span>
             </div>
-            <div>
+            <div class="header-section-eli">
                 <span class="text-xl text-gray-50">Available in 57 Countries</span>
             </div>
-            <div>
+            <div class="header-section-eli">
                 <span class="text-xl text-gray-50">42 Industrial Printers</span>
             </div>
         </section>
     </header>
 
-    <main class="w-full h-[1000px] bg-blue-300"></main>
+    <main class="w-full h-[1000px] bg-blue-300">
+        <section class="relative w-full h-[100vh]">
+            <div class="section-batch bg-gray-50 p-3 w-[300px] rounded-b-lg">
+                <h2 class="text-xl font-semibold">What we offer</h2>
+            </div>
+
+            <div class="video-section w-[600px] h-[400px] z-8">
+                <span class="text-4xl font-normal text-gray-50">As 3D manufacturing becomes more and more accessible, we provide industrial solutions for the entire 3D process, from prototyping to industrial printing</span>
+
+                <button
+                    class="px-7 py-4 mt-10 hidden lg:block text-sm cursor-pointer font-semibold text-gray-50 bg-blue-500 rounded-full hover:bg-gray-50 hover:text-gray-800">
+                    Learn more
+                </button>
+            </div>
+
+            <video class="z-9" src="./assets/vedio-1.mp4" autoplay loop muted playsinline></video>
+        </section>
+    </main>
 
     <script type="module" src="script.js"></script>
 </body>
