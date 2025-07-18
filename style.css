@@ -12,7 +12,12 @@ header {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 40%;
-  left: 20%;
+  left: 0;
+}
+
+.translateX{
+  left: 22%;
+  transition-duration: 1.3s;
 }
 
 header > section > div::before {
