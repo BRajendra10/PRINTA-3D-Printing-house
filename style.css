@@ -1,71 +1,63 @@
 header {
   width: 100%;
   height: 120vh;
-  background-image: url(assets/header-image.jpg);
-  background-position: center;
-  background-size: cover;
+  background: center/cover url(assets/header-image.jpg) no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
-.header-info {
-  width: 550px;
-  height: fit-content;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 40%;
-  left: 25%;
-  animation-name: slideRight;
-  animation-duration: 0.8s;
-}
-
-.video-section{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 60%;
-  left: 25%;
-  animation-name: slideRight;
-  animation-duration: 0.8s;
-  animation-timeline: scroll();
-}
-
-.section-batch{
-  position: absolute;
-  top: 0%;
-  left: 8.5%;
-  animation-name: slideDown;
-  animation-timeline: scroll();
-  animation-range: 0% 30%;
-}
-
-@keyframes slideDown{
-  50%{
-    top: -5%;
-  }
-  100%{
-    top: 0%;
-  }
-}
-
-@keyframes slideRight{
-  0%{
-    left: 0%;
-  }
-  100%{
-    left: 25%;
-  }
+.delay{
+  transition-duration: 0.5s;
 }
 
 header > section > div::before {
   content: "";
   display: inline-block;
   width: 8px;
-  height: 5rem;
-  background: #2B7FFF;
+  height: 3rem;
   margin-right: 8px;
   vertical-align: middle;
+  background-color: #2B7FFF;
   border-radius: 8px;
 }
 
-.eli-height{
-  height: 5rem;
-  transition-duration: 1.3s;
+@keyframes slideRight {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 30%;
+  }
 }
+
+/* .video-section {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  animation: slideRight 0.8s ease-out forwards;
+  animation-timeline: scroll();
+} */
+
+/* .section-batch {
+  position: absolute;
+  top: 0;
+  left: 8.5%;
+  animation: slideDown linear;
+  animation-timeline: scroll();
+  animation-range: 0% 40%;
+} */
+
+/* @keyframes slideDown {
+  0% {
+    top: -5%;
+  }
+  100% {
+    top: 0%;
+  }
+} */
+
+/* .eli-height {
+  height: 5rem;
+  transition: height 1.3s ease;
+} */
