@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 info_eliment.forEach((el, i) => {
     gsap.fromTo(el,
         { x: -250 },
-        { x: 0, duration: i + 1, ease: "back.out()" }
+        { x: 0, duration: i + 0.8, ease: "back.out()" }
     )
 })
 
