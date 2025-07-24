@@ -10,25 +10,17 @@ header {
   transition-duration: 0.5s;
 }
 
-header > section > div::before {
-  content: "";
+.header-section-el {
   display: inline-block;
-  width: 8px;
-  height: 3rem;
-  margin-right: 8px;
+  width: 0.6rem;
+  height: 0rem;
+  margin-right: 0.6rem;
   vertical-align: middle;
   background-color: #2B7FFF;
-  border-radius: 8px;
+  border-radius: 2rem;
+  transition: height 0.3s ease;
 }
 
-@keyframes slideRight {
-  from {
-    left: 0%;
-  }
-  to {
-    left: 30%;
-  }
-}
 
 /* .video-section {
   position: absolute;
@@ -46,18 +38,4 @@ header > section > div::before {
   animation: slideDown linear;
   animation-timeline: scroll();
   animation-range: 0% 40%;
-} */
-
-/* @keyframes slideDown {
-  0% {
-    top: -5%;
-  }
-  100% {
-    top: 0%;
-  }
-} */
-
-/* .eli-height {
-  height: 5rem;
-  transition: height 1.3s ease;
 } */
