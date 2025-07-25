@@ -12,8 +12,8 @@ info_eliment.forEach((el, i) => {
 
 header_section_eli.forEach((el, i) => {
     gsap.to(el, {
-        height: "5rem",
-        duration: 0.8,
+        height: "3.5rem",
+        duration: 0.6,
         ease: "power2.out",
         stagger: 0.2,
         scrollTrigger: {
