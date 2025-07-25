@@ -1,4 +1,5 @@
 const info_eliment = document.querySelectorAll(".info-eliment");
+const main_sec_info = document.querySelectorAll(".main-sec-info");
 const header_section_eli = document.querySelectorAll(".header-section-el");
 
 gsap.registerPlugin(ScrollTrigger);
@@ -7,6 +8,13 @@ info_eliment.forEach((el, i) => {
     gsap.fromTo(el,
         { x: -250 },
         { x: 0, duration: i + 0.8, ease: "back.out()" }
+    )
+})
+
+main_sec_info.forEach((el, i) => {
+    gsap.fromTo(el,
+        { x: -250 },
+        { x: 0, duration: i + 0.7, ease: "back.out()" }
     )
 })
 

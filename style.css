@@ -20,22 +20,3 @@ header {
   border-radius: 2rem;
   transition: height 0.3s ease;
 }
-
-
-/* .video-section {
-  position: absolute;
-  top: 60%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  animation: slideRight 0.8s ease-out forwards;
-  animation-timeline: scroll();
-} */
-
-/* .section-batch {
-  position: absolute;
-  top: 0;
-  left: 8.5%;
-  animation: slideDown linear;
-  animation-timeline: scroll();
-  animation-range: 0% 40%;
-} */
