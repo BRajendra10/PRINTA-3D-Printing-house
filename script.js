@@ -2,32 +2,39 @@ const info_eliment = document.querySelectorAll(".info-eliment");
 const main_sec_info = document.querySelectorAll(".main-sec-info");
 const header_section_eli = document.querySelectorAll(".header-section-el");
 
-gsap.registerPlugin(ScrollTrigger);
+function slideFromLeft(lists) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                gsap.from(entry.target,
+                    { x: -300, duration: 1.5, ease: "back.out()" }
+                )
 
-info_eliment.forEach((el, i) => {
-    gsap.fromTo(el,
-        { x: -250 },
-        { x: 0, duration: i + 0.8, ease: "back.out()" }
-    )
-})
+                observer.unobserve(entry.target);
+            }
+        })
+    })
 
-main_sec_info.forEach((el, i) => {
-    gsap.fromTo(el,
-        { x: -250 },
-        { x: 0, duration: i + 0.7, ease: "back.out()" }
-    )
-})
+    lists.forEach((el, i) => {
+        observer.observe(el);
+    })
+}
 
-header_section_eli.forEach((el, i) => {
-    gsap.to(el, {
-        height: "3.5rem",
-        duration: 0.6,
-        ease: "power2.out",
-        stagger: 0.2,
-        scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none play none"
+slideFromLeft(info_eliment);
+slideFromLeft(main_sec_info);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            gsap.to(entry.target, {
+                height: "3.3rem",
+                duration: 0.7,
+                ease: "power2.out",
+            });
         }
-    });
+    })
+})
+
+header_section_eli.forEach((el) => {
+    observer.observe(el);
 })
