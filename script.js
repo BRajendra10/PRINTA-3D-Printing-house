@@ -2,13 +2,14 @@ const info_eliment = document.querySelectorAll(".info-eliment");
 const main_sec_info = document.querySelectorAll(".main-sec-info");
 const header_section_eli = document.querySelectorAll(".header-section-el");
 const section_badge = document.querySelectorAll("#section-badge");
+const section_3_image = document.querySelectorAll("#section-3-image");
 
 function slideFromLeft(lists) {
     const leftObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 gsap.from(entry.target,
-                    { x: -300, duration: 1.5, ease: "back.out()" }
+                    { x: -300, duration: 0.7, ease: "power2.out()"}
                 )
 
                 leftObserver.unobserve(entry.target);
@@ -21,12 +22,12 @@ function slideFromLeft(lists) {
     })
 }
 
-function slideFromTop(lists){
+function slideFromTop(lists) {
     const topObserve = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if(entry.isIntersecting){
+            if (entry.isIntersecting) {
                 gsap.from(entry.target,
-                    {top: "-5%", duration: 0.8}
+                    { top: "-5%", duration: 0.7 }
                 )
 
                 topObserve.unobserve(entry.target);
@@ -49,7 +50,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             gsap.to(entry.target, {
                 height: "3.3rem",
-                duration: 0.7,
+                stagger: 0.5,
                 ease: "power2.out",
             });
         }
